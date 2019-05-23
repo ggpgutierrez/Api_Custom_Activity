@@ -14,9 +14,7 @@
 	},
 	"arguments": {
 		"execute": {
-			"inArguments": [{
-				"emailAddress": "{{InteractionDefaults.Email}}"
-			}],
+			"inArguments": [],
 			"outArguments": [],
 			"url": "https://custom-activity-journey.herokuapp.com/execute",
 			"verb": "POST",
