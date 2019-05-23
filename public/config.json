@@ -14,7 +14,9 @@
 	},
 	"arguments": {
 		"execute": {
-			"inArguments": [],
+			"inArguments": [{
+				"emailAddress": "{{InteractionDefaults.Email}}"
+			}],
 			"outArguments": [],
 			"url": "https://path/to/activity/activity/execute",
 			"verb": "POST",
