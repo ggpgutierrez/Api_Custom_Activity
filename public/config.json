@@ -18,7 +18,7 @@
 				"emailAddress": "{{InteractionDefaults.Email}}"
 			}],
 			"outArguments": [],
-			"url": "https://path/to/activity/activity/execute",
+			"url": "https://custom-activity-journey.herokuapp.com/execute",
 			"verb": "POST",
 			"format": "json",
 			"header": "",
@@ -28,21 +28,21 @@
 	},
 	"configurationArguments": {
 		"save": {
-			"url": "https://path/to/activity/activity/save",
+			"url": "https://custom-activity-journey.herokuapp.com/save",
 			"verb": "POST",
 			"format": "json",
 			"body": "",
 			"useJwt": false
 		},
 		"publish": {
-			"url": "https://path/to/activity/activity/publish",
+			"url": "https://custom-activity-journey.herokuapp.com/publish",
 			"verb": "POST",
 			"format": "json",
 			"body": "",
 			"useJwt": false
 		},
 		"validate": {
-			"url": "https://path/to/activity/activity/validate",
+			"url": "https://custom-activity-journey.herokuapp.com/validate",
 			"verb": "POST",
 			"format": "json",
 			"body": "",
