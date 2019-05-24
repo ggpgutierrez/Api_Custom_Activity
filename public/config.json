@@ -25,6 +25,7 @@
 		}
 	},
 	"configurationArguments": {
+		"applicationExtensionKey" : "48ebb84c-20d7-4ddc-ad01-161585b5224c",
 		"save": {
 			"url": "https://custom-activity-journey.herokuapp.com/save",
 			"verb": "POST",
