@@ -10,8 +10,10 @@
   "author": "Gabriel Gutierrez Pereira",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "^3.5.5",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "jsonwebtoken": "^8.5.0"
+    "jsonwebtoken": "^8.5.0",
+    "promise-mysql": "^3.3.2"
   }
 }
