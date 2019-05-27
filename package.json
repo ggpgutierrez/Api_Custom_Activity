@@ -2,7 +2,7 @@
   "name": "custom-activity-boilerplate",
   "version": "1.0.0",
   "description": "Custom activity boilerplate for Marketing Cloud Journey Builder",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
