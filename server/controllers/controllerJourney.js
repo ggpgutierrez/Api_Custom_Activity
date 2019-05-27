@@ -1,7 +1,7 @@
 const journeyService = require('../services/servicesJourney')
 
 const postJourney = (req, res) => {
-    const email = req['inArguments'][0]['Email'];
+    const email = req.body['inArguments'][0]['Email'];
     console.log(email);
 
     try{
