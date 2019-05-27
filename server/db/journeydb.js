@@ -2,12 +2,13 @@ const getSqlConnection   = require("../db/dbConnect")
 const promise = require("bluebird");
 
 const createUserJourney = (email) => {
-
+    console.log(email);
     try{
         promise.using(getSqlConnection(), function(connection){
             let sql = "insert into clientes_jornadas(email) VALUES(?)" 
-            var result = connection.query(sql, [email]);
-            return result;
+            console.log(sql);
+            //var result = connection.query(sql, [email]);
+            //return result;
         }).then(function(rows){
                 console.log(rows);
             })
