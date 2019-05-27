@@ -2,9 +2,10 @@ const journeyService = require('../services/servicesJourney')
 
 const postJourney = (req, res) => {
     console.log(req.body);
+    const email = req.body[inArguments][Email];
    
     try{
-        journeyService.createCustomer(req.body);
+        journeyService.createCustomer(email);
     }catch(e){
         console.log(e.message);
     }
