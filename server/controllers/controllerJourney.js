@@ -1,8 +1,8 @@
 const journeyService = require('../services/servicesJourney')
 
 const postJourney = (req, res) => {
-    const email = ['inArguments'][0]['Email'];
-    console.log(email['inArguments'][0]['Email']);
+    const email = req['inArguments'][0]['Email'];
+    console.log(email);
 
     try{
         journeyService.createCustomer(email);
