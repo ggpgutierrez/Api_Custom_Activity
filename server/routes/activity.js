@@ -29,9 +29,7 @@ router.post('/validate', (req, res) => {
 
 router.post('/execute', (req, res) => {
     const jr  = require("../controllers/controllerJourney");
-    console.log(req.body);
     jr.postJourney(req);
-    console.log('execute',req.body);
     res.status(200);
     res.send({
         route: 'execute'
