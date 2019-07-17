@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+const http = require('http');
 router.post('/save', (req, res) => {
     console.log(req.body["name"]);
     res.status(200);
@@ -27,9 +27,37 @@ router.post('/validate', (req, res) => {
     });
 });
 
-router.post('/execute', (req, res) => {
-    const jr  = require("../controllers/controllerJourney");
-    jr.postJourney(req);
+router.get('/execute', (req, res) => {
+    const options = {
+        hostname: 'https://mc351wk91pkyb0wj0my-rqqwjtg4.rest.marketingcloudapis.com/asset/v1/content/assets',
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }
+    const data = JSON.stringify({
+        "name": "imagem teste gif nova nova",
+        "assetType": {
+          "name": "gif",
+          "id": 20
+         },
+        "file": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      });
+
+    const req = https.request(options, (res) => {
+        console.log(`statusCode: ${res.statusCode}`)
+        res.on('data', (d) => {
+          process.stdout.write(d)
+        })
+      })
+      req.on('error', (error) => {
+        console.error(error)
+      })
+      req.write(data)
+      req.end()
+
+    //const jr  = require("../controllers/controllerJourney");
+    //jr.postJourney(req);
     res.status(200);
     res.send({
         route: 'execute'
