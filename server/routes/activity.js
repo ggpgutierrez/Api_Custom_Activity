@@ -44,17 +44,17 @@ router.get('/execute', (req, res) => {
         "file": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       });
 
-    const req = https.request(options, (res) => {
+    const req2 = https.request(options, (res) => {
         console.log(`statusCode: ${res.statusCode}`)
         res.on('data', (d) => {
           process.stdout.write(d)
         })
       })
-      req.on('error', (error) => {
+      req2.on('error', (error) => {
         console.error(error)
       })
-      req.write(data)
-      req.end()
+      req2.write(data)
+      req2npm.end()
 
     //const jr  = require("../controllers/controllerJourney");
     //jr.postJourney(req);
